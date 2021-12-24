@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+</head>
+  
+<body>
+  <div style="height: 100%; width: 100%; margin-top:0%; margin-left:0%" id="webchat" role="main">
+    <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+  <script>
+     
+     // Set  the CSS rules.
+     const styleSet = window.WebChat.createStyleSet({
+         bubbleBackground: 'rgba(0, 0, 255, .1)',
+         bubbleFromUserBackground: 'rgba(0, 255, 0, .1)',
+         rootHeight: '100%',
+         rootWidth: '100%',
+         backgroundColor: 'paleturquoise'
+      });
+
+      // After generated, you can modify the CSS rules.
+      // Change font family and weight. 
+      styleSet.textContent = {
+         ...styleSet.textContent,
+         fontFamily: "'Comic Sans MS', 'Arial', sans-serif",
+         fontWeight: 'bold'
+      };
+
+    // Set the avatar options. 
+    const avatarOptions = {
+        botAvatarImage: 'https://i.pinimg.com/originals/bd/a3/00/bda300efb199d7aba4a6d7209d4e8fc5.jpg',
+        botAvatarInitials: 'BF',
+       // userAvatarImage: '<URL to your user avatar image>',
+        userAvatarInitials: 'ME'
+     };
+
+    window.WebChat.renderWebChat({
+      directLine: window.WebChat.createDirectLine({
+          token: '9X7QI6O2jKQ._73nRgWehNh7T6O9RcK31OZVAucp-uDvuyGFOE-Ye1s'}),
+      styleSet,
+      styleOptions: avatarOptions
+    }, document.getElementById('webchat'));
+    
+  </script>
+</div>
+</body>
