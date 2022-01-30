@@ -13,6 +13,9 @@ This bot can help you with identifying your illness through symptoms, suggest yo
 The bot interface is integrated into a demo hospital website for demonstration and the website is also hosted on Microsoft azure. 
 I made use of Microsoft Azure's static web app serivice to deploy and host this demo website.
 
+This repository has files of demo website. And the file "index.html" has webchat rendered into it.
+The webchat is accessed by a directline token which you can see in the "index.html" file.
+
 For demo:
 
 [Click here for a quick demo](https://gray-meadow-05b3f7410.azurestaticapps.net)
